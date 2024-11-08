@@ -71,7 +71,7 @@ def send_secret_santa_emails(assignments, sender_email, sender_password, smtp_se
 
         email_body = args.body.format(
             giver=name_email_dict[participant],
-            receiver = find_key_by_value(assignments,name_email_dict[participant]),
+            receiver = find_key_by_value(name_email_dict,assigned_person),
             Santa = args.Santa
         )
 
